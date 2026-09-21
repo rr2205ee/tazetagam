@@ -174,6 +174,7 @@
         .country-chip:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px);}
         
         .farms{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+        .direct-contact{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--wheat);border-radius:var(--radius);padding:28px;animation:slideUp 0.7s ease-out;}.direct-contact>p.dc-lead{color:var(--muted);margin-bottom:22px;font-size:1.02rem;}.dc-row{display:flex;flex-direction:column;gap:3px;padding:16px 18px;margin-bottom:12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;background:var(--paper);transition:border-color 0.2s ease,transform 0.2s ease;}.dc-row:hover{border-color:var(--wheat);transform:translateY(-1px);}.dc-label{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--wheat-ink);font-weight:700;}.dc-value{font-family:var(--display);font-size:1.3rem;color:var(--field-deep);word-break:break-word;}.dc-note{margin-top:18px;color:var(--muted);font-size:0.92rem;}
         .farm{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--wheat);border-radius:var(--radius);padding:28px;animation:slideUp 0.7s ease-out;transition:all 0.3s ease;}
         .farm:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(36,77,44,0.1);}
         .farm .tag{font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--wheat-ink);font-weight:700;}
@@ -320,59 +321,27 @@
     <div class="wrap">
         <span class="eyebrow">Контакты</span>
         <h1 style="max-width:16ch">Поговорим о вашем заказе</h1>
-        <p class="lead">Вопросы о продукции, оптовых поставках или экспорте? Напишите нам или позвоните напрямую директору.</p>
+        <p class="lead">Вопросы о продукции, оптовых поставках или экспорте? Позвоните или напишите директору напрямую.</p>
     </div>
 </section>
 <section class="block">
     <div class="wrap" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:start">
         <div>
             <div class="section-head" style="margin-bottom:24px">
-                <h2 style="font-family:var(--display);color:var(--field-deep);font-size:1.7rem">Отправить сообщение</h2>
+                <h2 style="font-family:var(--display);color:var(--field-deep);font-size:1.7rem">Свяжитесь с нами напрямую</h2>
             </div>
-            <div id="alert">
-                
-                    
-                
+            <div class="direct-contact">
+                <p class="dc-lead">Позвоните или напишите директору — мы отвечаем быстро.</p>
+                <a class="dc-row" href="tel:+99363805000">
+                    <span class="dc-label">Телефон</span>
+                    <span class="dc-value">+993 63 80 50 00</span>
+                </a>
+                <a class="dc-row" href="mailto:pena.gapurov@gmail.com">
+                    <span class="dc-label">Эл. почта</span>
+                    <span class="dc-value">pena.gapurov@gmail.com</span>
+                </a>
+                <p class="dc-note">Пена Гапуров, директор</p>
             </div>
-            
-            <form id="contactForm" data-success="Спасибо! Мы получили ваше сообщение и скоро свяжемся с вами." data-missing="Пожалуйста, укажите имя, эл. почту и сообщение." data-invalid-email="Похоже, адрес эл. почты указан неверно." data-short="Пожалуйста, напишите сообщение немного подробнее." data-long="Одно из полей слишком длинное." method="post" action="https://api.web3forms.com/submit" novalidate data-sending="Отправка..." data-send="Отправить сообщение" data-error="Что-то пошло не так. Попробуйте ещё раз." data-conn="Ошибка соединения. Попробуйте позже.">
-                
-                <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE">
-                <input type="hidden" name="subject" value="New enquiry from tazetagam.com">
-                <input type="hidden" name="from_name" value="TAZE TAGAM website">
-                <input type="hidden" name="redirect" value="https://www.tazetagam.com/ru/contact/?sent=1">
-                <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display:none">
-                <div style="margin-bottom:16px">
-                    <label for="name" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Имя и фамилия *</label>
-                    <input type="text" id="name" name="name" required style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem">
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
-                    <div>
-                        <label for="email" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Эл. почта *</label>
-                        <input type="email" id="email" name="email" required style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem">
-                    </div>
-                    <div>
-                        <label for="phone" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Телефон</label>
-                        <input type="text" id="phone" name="phone" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem">
-                    </div>
-                </div>
-                <div style="margin-bottom:16px">
-                    <label for="subject" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Тема</label>
-                    <select id="subject" name="topic" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem;background:#fff">
-                        <option value="">Выберите тему</option>
-                        <option>Заказ яйца</option>
-                        <option>Заказ мяса птицы</option>
-                        <option>Опт / контрактные поставки</option>
-                        <option>Экспортный запрос</option>
-                        <option>Другое</option>
-                    </select>
-                </div>
-                <div style="margin-bottom:20px">
-                    <label for="message" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Сообщение *</label>
-                    <textarea id="message" name="message" required rows="6" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem;resize:vertical"></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark" id="submitBtn" style="width:100%">Отправить сообщение</button>
-            </form>
         </div>
         <div>
             <div class="farm" style="margin-bottom:20px">
@@ -392,7 +361,7 @@
             </div>
             <div class="farm" style="border-left-color:var(--wheat);text-align:center">
                 <span class="tag">Поделитесь нашим сайтом</span>
-                <img src="../../static/img/qr.png" alt="QR code for tazetagam.com" style="width:180px;max-width:100%;margin:14px auto 10px;display:block;border-radius:8px" width="600" height="600" loading="lazy" decoding="async">
+                <img src="../../static/img/qr.png" alt="QR code for tazetagam.com" style="width:180px;height:auto;max-width:100%;margin:14px auto 10px;display:block;border-radius:8px" width="594" height="594" loading="lazy" decoding="async">
                 <p style="color:var(--muted);font-size:0.88rem">Наведите камеру телефона, чтобы открыть tazetagam.com, или сохраните код, чтобы показать другим.</p>
             </div>
         </div>
@@ -450,8 +419,6 @@
     </footer>
     
     <script src="../../static/js/main.js"></script>
-    
-<script src="../../static/js/contact.js"></script>
 
 </body>
 </html>

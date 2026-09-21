@@ -24,19 +24,27 @@ To change wording, edit the file directly. Note that a change to the shared
 header or footer has to be repeated in all 11 HTML files — that is the trade-off
 for having no build step.
 
-## Before going live: the contact form
+## The contact form is currently switched off
 
-The form posts to [Web3Forms](https://web3forms.com), a free service that emails
-each submission. Free tier: 250 submissions/month.
+The contact pages show the director's phone and email directly instead of a
+form. This is deliberate: the form posts to [Web3Forms](https://web3forms.com),
+which needs an access key, and until that key exists every submission would
+fail and the sender's message would be lost.
 
-1. Go to https://web3forms.com, enter `pena.gapurov@gmail.com`, and they email
-   you an access key.
-2. Paste that key over `PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE` in **both** files:
-   - `contact/index.html`
-   - `ru/contact/index.html`
+**To turn the form back on:**
 
-The key is meant to be public — it only allows sending mail to your address.
-Until it is replaced, the form will fail.
+1. Sign up at https://web3forms.com with the address that should receive
+   enquiries. The access key is emailed to that address.
+2. Restore the form markup on `contact/index.html` and `ru/contact/index.html`.
+   Both pages are in this repository's git history from before the form was
+   removed, along with the `<script src=".../contact.js">` tag each page had at
+   the end. `static/js/contact.js` was kept in place for this.
+3. Replace `PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE` with the real key in both
+   pages.
+4. Send a real test message and confirm it arrives before relying on it.
+
+The key is meant to be public - it only permits sending mail to your own
+address.
 
 ## Deploying to GitHub Pages
 

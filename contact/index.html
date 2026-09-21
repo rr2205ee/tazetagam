@@ -174,6 +174,7 @@
         .country-chip:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px);}
         
         .farms{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+        .direct-contact{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--wheat);border-radius:var(--radius);padding:28px;animation:slideUp 0.7s ease-out;}.direct-contact>p.dc-lead{color:var(--muted);margin-bottom:22px;font-size:1.02rem;}.dc-row{display:flex;flex-direction:column;gap:3px;padding:16px 18px;margin-bottom:12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;background:var(--paper);transition:border-color 0.2s ease,transform 0.2s ease;}.dc-row:hover{border-color:var(--wheat);transform:translateY(-1px);}.dc-label{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--wheat-ink);font-weight:700;}.dc-value{font-family:var(--display);font-size:1.3rem;color:var(--field-deep);word-break:break-word;}.dc-note{margin-top:18px;color:var(--muted);font-size:0.92rem;}
         .farm{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--wheat);border-radius:var(--radius);padding:28px;animation:slideUp 0.7s ease-out;transition:all 0.3s ease;}
         .farm:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(36,77,44,0.1);}
         .farm .tag{font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--wheat-ink);font-weight:700;}
@@ -320,59 +321,27 @@
     <div class="wrap">
         <span class="eyebrow">Contact us</span>
         <h1 style="max-width:16ch">Let&#39;s talk about your order</h1>
-        <p class="lead">Questions about products, wholesale supply or export? Send us a message or call our director directly.</p>
+        <p class="lead">Questions about products, wholesale supply or export? Call or email our director directly.</p>
     </div>
 </section>
 <section class="block">
     <div class="wrap" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:start">
         <div>
             <div class="section-head" style="margin-bottom:24px">
-                <h2 style="font-family:var(--display);color:var(--field-deep);font-size:1.7rem">Send a message</h2>
+                <h2 style="font-family:var(--display);color:var(--field-deep);font-size:1.7rem">Contact us directly</h2>
             </div>
-            <div id="alert">
-                
-                    
-                
+            <div class="direct-contact">
+                <p class="dc-lead">Call or email the director — we reply quickly.</p>
+                <a class="dc-row" href="tel:+99363805000">
+                    <span class="dc-label">Phone</span>
+                    <span class="dc-value">+993 63 80 50 00</span>
+                </a>
+                <a class="dc-row" href="mailto:pena.gapurov@gmail.com">
+                    <span class="dc-label">Email</span>
+                    <span class="dc-value">pena.gapurov@gmail.com</span>
+                </a>
+                <p class="dc-note">Pena Gapurov, Director</p>
             </div>
-            
-            <form id="contactForm" data-success="Thank you. We have received your message and will be in touch soon." data-missing="Please fill in your name, email and message." data-invalid-email="That email address doesn't look right." data-short="Please write a slightly longer message." data-long="One of the fields is too long." method="post" action="https://api.web3forms.com/submit" novalidate data-sending="Sending..." data-send="Send message" data-error="Something went wrong. Please try again." data-conn="Connection error. Please try again later.">
-                
-                <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE">
-                <input type="hidden" name="subject" value="New enquiry from tazetagam.com">
-                <input type="hidden" name="from_name" value="TAZE TAGAM website">
-                <input type="hidden" name="redirect" value="https://www.tazetagam.com/contact/?sent=1">
-                <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display:none">
-                <div style="margin-bottom:16px">
-                    <label for="name" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Full name *</label>
-                    <input type="text" id="name" name="name" required style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem">
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
-                    <div>
-                        <label for="email" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Email *</label>
-                        <input type="email" id="email" name="email" required style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem">
-                    </div>
-                    <div>
-                        <label for="phone" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Phone</label>
-                        <input type="text" id="phone" name="phone" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem">
-                    </div>
-                </div>
-                <div style="margin-bottom:16px">
-                    <label for="subject" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Subject</label>
-                    <select id="subject" name="topic" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem;background:#fff">
-                        <option value="">Select a subject</option>
-                        <option>Egg order</option>
-                        <option>Poultry meat order</option>
-                        <option>Wholesale / contract supply</option>
-                        <option>Export enquiry</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div style="margin-bottom:20px">
-                    <label for="message" style="display:block;font-weight:600;margin-bottom:6px;font-size:0.92rem">Message *</label>
-                    <textarea id="message" name="message" required rows="6" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:1rem;resize:vertical"></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark" id="submitBtn" style="width:100%">Send message</button>
-            </form>
         </div>
         <div>
             <div class="farm" style="margin-bottom:20px">
@@ -392,7 +361,7 @@
             </div>
             <div class="farm" style="border-left-color:var(--wheat);text-align:center">
                 <span class="tag">Share our website</span>
-                <img src="../static/img/qr.png" alt="QR code for tazetagam.com" style="width:180px;max-width:100%;margin:14px auto 10px;display:block;border-radius:8px" width="600" height="600" loading="lazy" decoding="async">
+                <img src="../static/img/qr.png" alt="QR code for tazetagam.com" style="width:180px;height:auto;max-width:100%;margin:14px auto 10px;display:block;border-radius:8px" width="594" height="594" loading="lazy" decoding="async">
                 <p style="color:var(--muted);font-size:0.88rem">Scan with your phone camera to open tazetagam.com — or save it to show a friend.</p>
             </div>
         </div>
@@ -450,8 +419,6 @@
     </footer>
     
     <script src="../static/js/main.js"></script>
-    
-<script src="../static/js/contact.js"></script>
 
 </body>
 </html>
