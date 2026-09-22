@@ -2,7 +2,6 @@
 // Everything here is an enhancement: without JavaScript all content is still visible.
 (function () {
     var doc = document.documentElement;
-    doc.classList.add('js');
     var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -40,9 +39,22 @@
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && menu && menu.classList.contains('is-open')) setMenu(false);
         });
+        // Close the phone menu if the screen becomes desktop-wide (e.g. a tablet is rotated).
+        var desktop = window.matchMedia && window.matchMedia('(min-width: 980px)');
+        if (desktop && desktop.addEventListener) {
+            desktop.addEventListener('change', function (e) {
+                if (e.matches && menu && menu.classList.contains('is-open')) setMenu(false);
+            });
+        }
 
         // Reveal sections as they scroll into view
         var revealEls = document.querySelectorAll('.reveal');
+        // Anything already on screen stays visible instead of flashing out and fading back in.
+        revealEls.forEach(function (el) {
+            if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('is-in');
+        });
+        // Only now hide the rest, in the same step, so nothing on screen flickers.
+        doc.classList.add('js');
         if ('IntersectionObserver' in window && !reducedMotion) {
             var revealObs = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {

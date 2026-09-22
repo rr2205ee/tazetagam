@@ -132,6 +132,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .brand-text strong{display:block;font:600 1.05rem/1.1 var(--display);letter-spacing:.01em}
 .brand-text span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
 @media (min-width:1180px){.brand-text{display:block}}
+@media (max-width:400px){.site-header .container{gap:.75rem}}
 
 .nav{display:none}
 .nav ul{display:flex;gap:.25rem}
@@ -157,6 +158,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .mobile-menu{position:fixed;inset:0;z-index:150;background:var(--green-950);color:var(--on-dark);display:flex;flex-direction:column;padding:1rem var(--gutter) 2rem;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;overflow-y:auto}
 .mobile-menu.is-open{opacity:1;visibility:visible}
 .mobile-menu__top{display:flex;justify-content:space-between;align-items:center;height:60px}
+.mobile-menu .menu-close{display:inline-flex;border-color:rgba(255,255,255,.3)}
 .mobile-menu nav{margin-top:2rem}
 .mobile-menu nav a{display:block;font:500 clamp(2rem,8vw,2.6rem)/1.25 var(--display);text-decoration:none;padding:.35rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .mobile-menu nav a[aria-current="page"]{color:var(--gold-300)}
