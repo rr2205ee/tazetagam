@@ -1,515 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TAZE TAGAM - large-scale egg production and poultry meat from Turkmenistan, exporting to Dubai, Qatar and Afghanistan.">
-    <meta name="google-site-verification" content="3x5TuNVPzOp_HtWe9-bEVDqR6htUriOTR6dDkrmv5ek">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "TAZE TAGAM",
-      "url": "https://www.tazetagam.com/",
-      "description": "Large-scale egg production and premium poultry meat from Ahal Velayat, Turkmenistan. Exporting to Dubai, Qatar and Afghanistan since 2014.",
-      "foundingDate": "2014",
-      "telephone": "+99363805000",
-      "email": "pena.gapurov@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Ahal Velayat",
-        "addressCountry": "TM"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "Pena Gapurov",
-        "jobTitle": "Director",
-        "worksFor": {"@type": "Organization", "name": "TAZE TAGAM"},
-        "telephone": "+99363805000",
-        "email": "pena.gapurov@gmail.com"
-      }
-    }
-    </script>
-    <link rel="canonical" href="https://www.tazetagam.com/">
-    <link rel="alternate" hreflang="en" href="https://www.tazetagam.com/">
-    <link rel="alternate" hreflang="ru" href="https://www.tazetagam.com/ru/">
-    <link rel="alternate" hreflang="x-default" href="https://www.tazetagam.com/">
-    <title>TAZE TAGAM — Fresh eggs and premium poultry meat</title>
-    <link rel="icon" href="static/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
-    <link rel="preload" href="static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="static/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <style>
-        @font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:swap;src:url(static/fonts/fraunces-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-        @font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:swap;src:url(static/fonts/fraunces-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-        @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(static/fonts/inter-cyrillic-ext.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}
-        @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(static/fonts/inter-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}
-        @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(static/fonts/inter-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
-        @font-face{font-family:'Inter';font-style:normal;font-weight:400 700;font-display:swap;src:url(static/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
-        :root{
-            --ink:#1c2118; --field:#234d2c; --field-deep:#18371f; --wheat:#c79324;
-            --wheat-soft:#e7c878; --wheat-ink:#876418; --paper:#faf7ef; --panel:#f1ead8; --line:#e2dac6;
-            --muted:#6b6a5c; --white:#fff;
-            --display:'Fraunces',Georgia,'Times New Roman',serif;
-            --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-            --maxw:1140px; --radius:14px;
-        }
-        *{margin:0;padding:0;box-sizing:border-box;}
-        html{scroll-behavior:smooth;}
-        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-        @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-        @keyframes slideInLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
-        @keyframes slideInRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
-        @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-        @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.8}}
-        @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-        
-        body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;}
-        .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-        a{color:inherit;text-decoration:none;}
-        
-        .topbar{background:var(--field-deep);color:#d8e3d2;font-size:0.8rem;letter-spacing:0.04em;}
-        .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:8px 24px;flex-wrap:wrap;}
-        .topbar a{color:var(--wheat-soft);font-weight:500;}
-        
-        header.site{position:sticky;top:0;z-index:100;background:rgba(250,247,239,0.95);backdrop-filter:blur(12px);border-bottom:2px solid var(--line);box-shadow:0 2px 8px rgba(0,0,0,0.05);}
-        nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--maxw);margin:0 auto;}
-        
-        .brand{display:flex;align-items:center;gap:14px;text-decoration:none;}
-        .brand-logos{display:flex;align-items:center;gap:10px;flex:none;}
-        .brand-logos img{height:40px;width:auto;display:block;}
-        .brand-logos .mark{width:40px;height:40px;flex:none;}
-        .brand-logos .logo-ph{height:40px;min-width:54px;border:1px dashed var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.58rem;color:var(--muted);padding:0 7px;text-transform:uppercase;letter-spacing:0.08em;text-align:center;line-height:1.1;}
-        .brand-divider{width:1px;height:34px;background:var(--line);}
-        .brand-text{display:flex;flex-direction:column;}
-        .brand-text .name{font-family:var(--display);font-weight:600;font-size:1.2rem;letter-spacing:0.03em;color:var(--field-deep);line-height:1.1;border-bottom:1.5px solid var(--wheat);padding-bottom:4px;margin-bottom:4px;white-space:nowrap;}
-        .brand-text .name .amp{color:var(--wheat-ink);font-style:italic;padding:0 2px;}
-        .brand-text .sub{font-family:var(--body);font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--wheat-ink);font-weight:600;}
-        
-        .nav-wrap{display:flex;align-items:center;gap:8px;}
-        .nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
-        .nav-links a{text-decoration:none;color:var(--ink);font-weight:500;font-size:0.95rem;padding:10px 16px;border-radius:8px;transition:all 0.25s ease;position:relative;display:flex;align-items:center;gap:6px;}
-        .nav-links a:hover{background:var(--panel);color:var(--field-deep);}
-        .nav-links a.active{background:var(--field);color:var(--white);font-weight:700;box-shadow:0 4px 14px rgba(36,77,44,0.2);}
-        .nav-links a.cta{background:var(--field);color:var(--white);margin-left:6px;box-shadow:0 4px 12px rgba(36,77,44,0.15);}
-        .nav-links a.cta:hover{background:var(--field-deep);transform:translateY(-2px);box-shadow:0 6px 16px rgba(36,77,44,0.25);}
-        
-        .lang-switch{display:flex;align-items:center;gap:2px;font-size:0.82rem;font-weight:600;margin-left:6px;}
-        .lang-switch a{padding:5px 8px;border-radius:6px;text-decoration:none;color:var(--muted);transition:all 0.2s;}
-        .lang-switch a.active{background:var(--field);color:var(--white);}
-        .lang-switch span{color:var(--muted);}
-        
-        .nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:1.1rem;color:var(--field);}
-        
-        .breadcrumbs{background:var(--panel);border-bottom:2px solid var(--wheat);padding:14px 0;font-size:0.9rem;display:none;font-weight:500;}
-        .breadcrumbs.show{display:block;}
-        .breadcrumbs a{color:var(--field);font-weight:700;transition:all 0.2s;}
-        .breadcrumbs a:hover{color:var(--field-deep);text-decoration:underline;}
-        .breadcrumbs span{color:var(--wheat);margin:0 10px;font-weight:700;}
-        
-        .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:0.98rem;padding:14px 28px;border-radius:999px;text-decoration:none;cursor:pointer;border:none;transition:all 0.3s ease;}
-        .btn-primary{background:var(--wheat);color:var(--field-deep);}
-        .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(199,147,36,0.35);}
-        .btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.5);}
-        .btn-ghost:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px);}
-        .btn-dark{background:var(--field);color:var(--white);}
-        .btn-dark:hover{background:var(--field-deep);transform:translateY(-3px);box-shadow:0 10px 24px rgba(36,77,44,0.25);}
-        
-        .page-hero{background:linear-gradient(160deg,var(--field-deep) 0%,var(--field) 100%);color:var(--white);padding:60px 0 40px;}
-        .page-hero h1{font-family:var(--display);font-size:2.4rem;margin-bottom:12px;letter-spacing:-0.01em;}
-        .page-hero p{font-size:1.05rem;color:#dde7d8;max-width:50em;}
-        
-        .hero{background:radial-gradient(900px 500px at 80% -10%,rgba(199,147,36,0.18),transparent 60%),linear-gradient(160deg,var(--field-deep) 0%,var(--field) 100%);color:var(--white);padding:88px 0 0;overflow:hidden;}
-        .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;}
-        .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--wheat-ink);font-weight:600;margin-bottom:20px;}.hero .eyebrow,.page-hero .eyebrow{color:var(--wheat-soft);}
-        .eyebrow::before{content:"";width:26px;height:2px;background:var(--wheat);display:inline-block;}
-        .hero h1{font-family:var(--display);font-weight:600;font-size:clamp(2.3rem,5vw,3.7rem);line-height:1.05;letter-spacing:-0.01em;margin-bottom:22px;}
-        .hero h1 em{color:var(--wheat-soft);font-style:normal;}
-        .hero p.lead{font-size:1.12rem;color:#dde7d8;max-width:32em;margin-bottom:32px;}
-        .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
-        .hero-panel{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:var(--radius);padding:28px;}
-        .hero-panel h2{font-family:var(--body);font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--wheat-soft);margin-bottom:18px;font-weight:600;}
-        .panel-stat{padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.12);}
-        .panel-stat:last-child{border-bottom:none;}
-        .panel-stat .num{font-family:var(--display);font-size:1.9rem;font-weight:600;line-height:1;}
-        .panel-stat .label{font-size:0.9rem;color:#cdd8c8;margin-top:4px;}
-        
-        .hero-strip{margin-top:64px;background:var(--wheat);color:var(--field-deep);}
-        .hero-strip .wrap{display:flex;justify-content:space-between;gap:24px;padding:16px 24px;flex-wrap:wrap;font-weight:600;font-size:0.92rem;}
-        
-        section.block{padding:80px 0;animation:fadeInUp 0.8s ease-out;}
-        section.block.alt{background:var(--panel);}
-        .section-head{max-width:38em;margin-bottom:48px;animation:slideUp 0.7s ease-out;}
-        .section-head .eyebrow{color:var(--wheat-ink);}
-        .section-head .eyebrow::before{background:var(--wheat);}
-        .section-head h2{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.1;color:var(--field-deep);letter-spacing:-0.01em;margin-bottom:12px;}
-        .section-head p{color:var(--muted);font-size:1.05rem;margin-top:14px;}
-        
-        .streams{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
-        .stream{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;animation:slideUp 0.7s ease-out;transition:all 0.3s ease;}
-        .stream:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(36,77,44,0.12);}
-        .stream .media{height:300px;background:linear-gradient(135deg,var(--field) 0%,var(--field-deep) 100%);color:rgba(255,255,255,0.85);display:flex;align-items:center;justify-content:center;text-align:center;font-size:0.85rem;padding:20px;overflow:hidden;}
-        .stream:nth-child(2) .media{background:linear-gradient(135deg,var(--wheat) 0%,#a9781b 100%);}
-        .stream .media img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
-        .stream .body{padding:28px;flex:1;display:flex;flex-direction:column;}
-        .stream h2,.stream h3{font-family:var(--display);font-size:1.5rem;color:var(--field-deep);margin-bottom:10px;}
-        .stream p{color:var(--muted);margin-bottom:16px;flex:1;}
-        .stream ul{list-style:none;margin-top:auto;}
-        .stream li{padding:7px 0 7px 26px;position:relative;color:var(--ink);}
-        .stream li::before{content:"";position:absolute;left:0;top:15px;width:9px;height:9px;border-radius:50%;background:var(--wheat);}
-        
-        .features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-        .feature{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:28px;animation:slideUp 0.7s ease-out;transition:all 0.3s ease;}
-        .feature:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(36,77,44,0.1);}
-        .feature .ic{width:44px;height:44px;border-radius:10px;background:var(--panel);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--field);}
-        .feature h3{font-size:1.15rem;color:var(--field-deep);margin-bottom:8px;}
-        .feature p{color:var(--muted);font-size:0.96rem;}
-        
-        .export-band{background:linear-gradient(160deg,var(--field-deep),var(--field));color:var(--white);}
-        .export-countries{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px;}
-        .country-chip{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:999px;padding:12px 26px;font-weight:600;font-size:1.05rem;transition:all 0.2s;}
-        .country-chip:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px);}
-        
-        .farms{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-        .farm{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--wheat);border-radius:var(--radius);padding:28px;animation:slideUp 0.7s ease-out;transition:all 0.3s ease;}
-        .farm:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(36,77,44,0.1);}
-        .farm .tag{font-size:0.74rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--wheat-ink);font-weight:700;}
-        .farm h3{font-family:var(--display);font-size:1.5rem;color:var(--field-deep);margin:6px 0 10px;}
-        .farm p{color:var(--muted);}
-        .farm-logo{height:110px;display:flex;align-items:center;justify-content:center;background:var(--white);border:1px solid var(--line);border-radius:10px;margin-bottom:18px;padding:14px;text-align:center;font-size:0.78rem;color:var(--muted);line-height:1.4;}
-        .farm-logo img{max-height:80px;max-width:100%;object-fit:contain;display:block;}
-        .farm .dir{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:0.92rem;color:var(--ink);font-weight:600;}
-        .farm .dir span{color:var(--muted);font-weight:400;}
-        .farms-note{color:var(--muted);font-size:1.05rem;margin-top:14px;max-width:52em;}
-        
-        .cta-band{background:var(--wheat);color:var(--field-deep);}
-        .cta-band .wrap{text-align:center;padding:64px 24px;}
-        .cta-band h2{font-family:var(--display);font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--field-deep);margin-bottom:14px;}
-        .cta-band p{color:#3e3311;font-size:1.08rem;margin-bottom:28px;max-width:50em;margin-left:auto;margin-right:auto;}
-        
-        footer.site{background:var(--field-deep);color:#c8d3c2;padding:56px 0 28px;}
-        .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
-        footer.site h2{color:var(--wheat-soft);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px;font-weight:700;}
-        footer.site a{color:#c8d3c2;transition:color 0.2s;}
-        footer.site a:hover{color:var(--white);}
-        footer.site ul{list-style:none;}
-        footer.site li{padding:6px 0;font-size:0.95rem;}
-        .foot-brand .name{font-family:var(--display);font-size:1.5rem;color:var(--white);letter-spacing:0.06em;}
-        .foot-brand p{margin-top:12px;font-size:0.94rem;max-width:32ch;line-height:1.6;}
-        .foot-bottom{border-top:1px solid rgba(255,255,255,0.12);margin-top:40px;padding-top:20px;font-size:0.85rem;color:#93a08c;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-        
-        .back-to-top{position:fixed;bottom:28px;right:28px;width:48px;height:48px;background:var(--field);color:var(--white);border:none;border-radius:999px;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:90;transition:all 0.3s ease;box-shadow:0 6px 20px rgba(36,77,44,0.3);}
-        .back-to-top:hover{background:var(--field-deep);transform:translateY(-3px);box-shadow:0 10px 28px rgba(36,77,44,0.4);}
-        .back-to-top.show{display:flex;}
-        .hov-dark{transition:all 0.25s;}
-        .hov-dark:hover{background:var(--field-deep) !important;transform:translateY(-2px);}
-        .hov-gold{transition:all 0.25s ease;}
-        .hov-gold:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(199,147,36,0.3);}
-        
-        #cookieBanner{position:fixed;bottom:0;left:0;right:0;background:var(--field-deep);color:var(--white);padding:16px;z-index:999;display:none;font-size:0.9rem;box-shadow:0 -2px 12px rgba(0,0,0,0.2);}
-        
-        /* ===== Decorative touches ===== */
-        /* Glowing gold call-to-action buttons with a passing shine */
-        .btn-primary{position:relative;overflow:hidden;animation:glowPulse 3.2s ease-in-out infinite;}
-        @keyframes glowPulse{0%,100%{box-shadow:0 0 0 rgba(199,147,36,0);}50%{box-shadow:0 0 26px rgba(199,147,36,0.5);}}
-        .btn-primary::after{content:"";position:absolute;top:0;left:-80%;width:45%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,0.5),transparent);transform:skewX(-20deg);animation:shine 5s ease-in-out infinite;}
-        @keyframes shine{0%,65%{left:-80%;}100%{left:150%;}}
-        .cta-band .btn-dark{animation:glowPulseGreen 3.2s ease-in-out infinite;}
-        @keyframes glowPulseGreen{0%,100%{box-shadow:0 0 0 rgba(36,77,44,0);}50%{box-shadow:0 0 24px rgba(36,77,44,0.45);}}
-        /* Floating egg illustration */
-        .egg-anim{animation:floatBob 4.5s ease-in-out infinite;}
-        @keyframes floatBob{0%,100%{transform:translateY(0) rotate(-2deg);}50%{transform:translateY(-12px) rotate(2deg);}}
-        /* Subtle egg-pattern texture on tinted sections */
-        section.block.alt{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cellipse cx='32' cy='32' rx='10' ry='13' fill='%23c79324' opacity='0.07'/%3E%3Cellipse cx='98' cy='98' rx='10' ry='13' fill='%23244d2c' opacity='0.05'/%3E%3C/svg%3E");}
-        .cta-band{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cellipse cx='32' cy='32' rx='10' ry='13' fill='%23244d2c' opacity='0.08'/%3E%3Cellipse cx='98' cy='98' rx='10' ry='13' fill='%23ffffff' opacity='0.1'/%3E%3C/svg%3E");}
-        /* Feature icons wake up on hover */
-        .feature .ic{transition:all 0.3s ease;}
-        .feature:hover .ic{background:var(--wheat);color:var(--field-deep);transform:rotate(-8deg) scale(1.1);}
-        /* Photos zoom gently inside their cards */
-        .stream .media img{transition:transform 0.6s ease;}
-        .stream:hover .media img{transform:scale(1.06);}
-        /* Golden gradient on the big statistic numbers */
-        .panel-stat .num{background:linear-gradient(120deg,#f3d98b,var(--wheat-soft) 60%,#e9b949);-webkit-background-clip:text;background-clip:text;color:transparent;}
-        /* Scroll-reveal (class added by JS; without JS everything stays visible) */
-        .reveal{opacity:0;transform:translateY(26px);transition:opacity 0.7s ease,transform 0.7s ease;}
-        .reveal.reveal-in{opacity:1;transform:translateY(0);}
-        @media (max-width:860px){
-            .hero-grid,.streams,.farms,.foot-grid,.features{grid-template-columns:1fr;}
-            /* Collapse every inline-styled multi-column grid to a single column */
-            [style*="grid-template-columns"]{grid-template-columns:1fr !important;}
-            .topbar .wrap{justify-content:center;text-align:center;font-size:0.72rem;}
-            .brand-text .name{white-space:normal;font-size:1.05rem;}
-            .wrap{padding-left:18px;padding-right:18px;}
-            .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:12px 24px 20px;gap:4px;}
-            .nav-links.open{display:flex;}
-            .nav-links a{padding:12px 14px;}
-            .nav-links a.cta{margin-left:0;text-align:center;}
-            .nav-toggle{display:block;}
-            .hero{padding-top:56px;}
-            .hero-strip{margin-top:48px;}
-            .back-to-top{bottom:20px;right:20px;width:44px;height:44px;}
-        }
-        @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto;animation:none !important;transition:none !important;}}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAZE TAGAM — Fresh eggs and premium poultry meat from Turkmenistan</title>
+<meta name="description" content="TAZE TAGAM — large-scale egg production and premium poultry meat from Ahal Velayat, Turkmenistan. Exporting to Dubai, Qatar and Afghanistan.">
+<meta name="google-site-verification" content="3x5TuNVPzOp_HtWe9-bEVDqR6htUriOTR6dDkrmv5ek">
+<meta name="theme-color" content="#18371f">
+<link rel="canonical" href="https://www.tazetagam.com/">
+<link rel="alternate" hreflang="en" href="https://www.tazetagam.com/">
+<link rel="alternate" hreflang="ru" href="https://www.tazetagam.com/ru/">
+<link rel="alternate" hreflang="x-default" href="https://www.tazetagam.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TAZE TAGAM">
+<meta property="og:title" content="TAZE TAGAM — Fresh eggs and premium poultry meat from Turkmenistan">
+<meta property="og:description" content="TAZE TAGAM — large-scale egg production and premium poultry meat from Ahal Velayat, Turkmenistan. Exporting to Dubai, Qatar and Afghanistan.">
+<meta property="og:url" content="https://www.tazetagam.com/">
+<meta property="og:image" content="https://www.tazetagam.com/static/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TAZE TAGAM — Fresh eggs and premium poultry meat from Turkmenistan">
+<meta name="twitter:description" content="TAZE TAGAM — large-scale egg production and premium poultry meat from Ahal Velayat, Turkmenistan. Exporting to Dubai, Qatar and Afghanistan.">
+<meta name="twitter:image" content="https://www.tazetagam.com/static/img/og-image.jpg">
+<link rel="icon" href="static/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+<link rel="preload" href="static/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="static/css/site.css?v=2">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://www.tazetagam.com/#org", "name": "TAZE TAGAM", "url": "https://www.tazetagam.com/", "logo": "https://www.tazetagam.com/static/img/logo.webp", "image": "https://www.tazetagam.com/static/img/og-image.jpg", "description": "Large-scale egg production and premium poultry meat from Ahal Velayat, Turkmenistan. Exporting to Dubai, Qatar and Afghanistan. Operating since 2014.", "foundingDate": "2014", "telephone": "+99363805000", "email": "pena.gapurov@gmail.com", "address": {"@type": "PostalAddress", "addressRegion": "Ahal Velayat", "addressCountry": "TM"}, "areaServed": ["TM", "AE", "QA", "AF"], "memberOf": {"@type": "Organization", "name": "Union of Entrepreneurs and Industrialists of Turkmenistan"}, "founder": {"@type": "Person", "name": "Pena Gapurov", "jobTitle": "Director"}, "contactPoint": {"@type": "ContactPoint", "telephone": "+99363805000", "email": "pena.gapurov@gmail.com", "contactType": "sales", "availableLanguage": ["Turkmen", "Russian", "English"]}, "subOrganization": [{"@type": "LocalBusiness", "name": "Taze Tagam", "telephone": "+99363805000", "address": {"@type": "PostalAddress", "addressLocality": "Ak Bugday Etrap", "addressRegion": "Ahal Velayat", "addressCountry": "TM"}}, {"@type": "LocalBusiness", "name": "Fermer", "telephone": "+99363805000", "address": {"@type": "PostalAddress", "addressLocality": "Gokdepe Etrap", "addressRegion": "Ahal Velayat", "addressCountry": "TM"}}]}</script>
 </head>
 <body>
-    <div class="topbar">
-        <div class="wrap">
-            <span>Garagum Farmers&#39; Association · Türkmenistan</span>
-            <span>Member of the Union of Entrepreneurs and Industrialists of Turkmenistan · <a href="tel:+99363805000">+993 63 80 50 00</a></span>
-        </div>
-    </div>
-    
-    <header class="site">
-        <nav>
-            <a class="brand" href="./">
-                <span class="brand-logos">
-                    
-                    <img src="static/img/logo.webp" alt="Taze Tagam logo" width="201" height="160">
-                    
-                    
-                    <img src="static/img/logo2.webp" alt="Fermer logo" width="488" height="324">
-                    
-                </span>
-                <span class="brand-divider"></span>
-                <span class="brand-text">
-                    <span class="name">Taze Tagam <span class="amp">&</span> Fermer</span>
-                    <span class="sub">Eggs · Poultry · Export</span>
-                </span>
-            </a>
-            <div class="nav-wrap">
-                <button class="nav-toggle" aria-label="Menu">☰</button>
-                <ul class="nav-links" id="navlinks">
-                    <li><a href="./" class="active">Home</a></li>
-                    <li><a href="about/" class="">About</a></li>
-                    <li><a href="products/" class="">Products</a></li>
-                    <li><a href="export/" class="">Export</a></li>
-                    <li><a href="contact/" class=" cta" title="">Contact</a></li>
-                    <li class="lang-switch">
-                        <a href="./" class="active">EN</a>
-                        <span>|</span>
-                        <a href="ru/" class="">RU</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </nav>
-    </header>
-    
-    
-    
-    <main>
-        
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="./" aria-label="TAZE TAGAM — Home">
+      <span class="brand-badge"><img src="static/img/logo.webp" alt="Täze Tagam logo" width="201" height="160"><img src="static/img/logo2.webp" alt="Fermer logo" width="488" height="324"></span>
+      <span class="brand-text"><strong>Taze Tagam &amp; Fermer</strong><span>Eggs · Poultry · Export</span></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation"><ul><li><a href="./" aria-current="page">Home</a></li><li><a href="about/">About</a></li><li><a href="products/">Products</a></li><li><a href="export/">Export</a></li><li><a href="contact/">Contact</a></li></ul></nav>
+    <div class="lang" aria-label="Language / Язык"><a href="./" hreflang="en" lang="en" aria-current="true">EN</a><a href="ru/" hreflang="ru" lang="ru">RU</a></div>
+    <a class="btn btn--gold header-cta" href="https://wa.me/99363805000?text=Hello%21%20I%27m%20interested%20in%20TAZE%20TAGAM%20products.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.9.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.47-9.47 9.47zm8.06-17.53A11.32 11.32 0 0 0 12.04.63C5.76.63.66 5.73.66 12c0 2 .52 3.96 1.52 5.69L.57 23.5l5.95-1.56a11.36 11.36 0 0 0 5.52 1.4h.01c6.27 0 11.38-5.1 11.38-11.37 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Get a quote</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
+  <div class="mobile-menu__top">
+    <a class="brand" href="./" aria-label="TAZE TAGAM"><span class="brand-badge"><img src="static/img/logo.webp" alt="Täze Tagam logo" width="201" height="160"><img src="static/img/logo2.webp" alt="Fermer logo" width="488" height="324"></span></a>
+    <button class="menu-toggle menu-close" type="button" aria-label="Close menu" style="display:inline-flex;border-color:rgba(255,255,255,.3)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <nav aria-label="Main navigation"><a href="./" aria-current="page">Home</a><a href="about/">About</a><a href="products/">Products</a><a href="export/">Export</a><a href="contact/">Contact</a></nav>
+  <div class="lang" aria-label="Language / Язык"><a href="./" hreflang="en" lang="en" aria-current="true">EN</a><a href="ru/" hreflang="ru" lang="ru">RU</a></div>
+  <div class="mobile-menu__foot">
+    <a class="btn btn--wa" href="https://wa.me/99363805000?text=Hello%21%20I%27m%20interested%20in%20TAZE%20TAGAM%20products.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.9.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.47-9.47 9.47zm8.06-17.53A11.32 11.32 0 0 0 12.04.63C5.76.63.66 5.73.66 12c0 2 .52 3.96 1.52 5.69L.57 23.5l5.95-1.56a11.36 11.36 0 0 0 5.52 1.4h.01c6.27 0 11.38-5.1 11.38-11.37 0-3.04-1.18-5.9-3.33-8.05z"/></svg>WhatsApp</a>
+    <a class="btn btn--ghost-light" href="tel:+99363805000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+993 63 80 50 00</a>
+  </div>
+</div>
+<main id="main">
 <section class="hero">
-    <div class="wrap">
-        <div class="hero-grid">
-            <div>
-                <span class="eyebrow">Since 2014 · Ahal Velayat, Turkmenistan</span>
-                <h1>Two farms. One standard of <em>freshness</em>.</h1>
-                <p class="lead">TAZE TAGAM is an integrated poultry enterprise producing table eggs and premium poultry meat at scale — and exporting it to markets across the Gulf and the region.</p>
-                <div class="hero-actions">
-                    <a href="products/" class="btn btn-primary">View our products</a>
-                    <a href="export/" class="btn btn-ghost">Export &amp; logistics</a>
-                </div>
-            </div>
-            <div class="hero-panel">
-                <h2>Production at a glance</h2>
-                <div class="panel-stat"><div class="num">200,000</div><div class="label">Egg-laying hens</div></div>
-                <div class="panel-stat"><div class="num">200,000</div><div class="label">Broiler chickens reared at once</div></div>
-                <div class="panel-stat"><div class="num">2014</div><div class="label">Operating and growing since</div></div>
-                <div class="panel-stat"><div class="num">3</div><div class="label">Export markets and counting</div></div>
-            </div>
-        </div>
+  <div class="hero__media"><img src="static/img/export2.webp" srcset="static/img/sizes/export2-640.webp 640w, static/img/sizes/export2-1000.webp 1000w, static/img/export2.webp 1400w" sizes="100vw" alt="Refrigerated trucks being loaded with boxed Fermer products at the TAZE TAGAM export dock" width="1400" height="647" fetchpriority="high" decoding="async"></div>
+  <div class="container hero__inner">
+    <span class="eyebrow" style="color:var(--gold-300)">Since 2014 · Ahal Velayat, Turkmenistan</span>
+    <h1 class="hero__title">Two farms. One standard of <em>freshness.</em></h1>
+    <p class="hero__lead">TAZE TAGAM is an integrated poultry enterprise producing table eggs and premium poultry meat at scale — and exporting it to markets across the Gulf and the region.</p>
+    <div class="btn-row">
+      <a class="btn btn--gold" href="products/">View our products<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn--ghost-light" href="https://wa.me/99363805000?text=Hello%21%20I%27m%20interested%20in%20TAZE%20TAGAM%20products.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.9.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.47-9.47 9.47zm8.06-17.53A11.32 11.32 0 0 0 12.04.63C5.76.63.66 5.73.66 12c0 2 .52 3.96 1.52 5.69L.57 23.5l5.95-1.56a11.36 11.36 0 0 0 5.52 1.4h.01c6.27 0 11.38-5.1 11.38-11.37 0-3.04-1.18-5.9-3.33-8.05z"/></svg>Request a quote</a>
     </div>
-    <div class="hero-strip">
-        <div class="wrap">
-            <span>&#9679; Integrated egg &amp; meat production</span>
-            <span>&#9679; Modern, large-scale facilities</span>
-            <span>&#9679; Reliable export logistics</span>
-            <span>&#9679; Garagum Farmers&#39; Association</span>
-        </div>
-    </div>
+    <ul class="hero__trust"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Exporting to Dubai, Qatar &amp; Afghanistan</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Certified by state sanitary &amp; veterinary services</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg>Member of the Union of Entrepreneurs and Industrialists</li></ul>
+  </div>
 </section>
 
-<section class="block">
-    <div class="wrap">
-        <div style="display:grid;grid-template-columns:0.8fr 1.2fr;gap:40px;align-items:center">
-            <div style="display:flex;justify-content:center;align-items:center;height:260px">
-                <svg class="egg-anim" viewBox="0 0 100 120" width="140" height="168" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 8px 16px rgba(36,77,44,0.2))">
-                    <!-- Egg body -->
-                    <ellipse cx="50" cy="55" rx="32" ry="45" fill="#E8D4B8" stroke="#C4985F" stroke-width="1.5"/>
-                    <!-- Shine/highlight -->
-                    <ellipse cx="42" cy="40" rx="12" ry="18" fill="#FFFFFF" opacity="0.6"/>
-                    <!-- Shadow at bottom -->
-                    <ellipse cx="50" cy="98" rx="28" ry="8" fill="rgba(36,77,44,0.1)"/>
-                    <!-- Decorative crack line (shows freshness) -->
-                    <path d="M 48 15 Q 50 20 48 25" stroke="#D4B5A0" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                </svg>
-            </div>
-            <div>
-                <span class="eyebrow">What we do</span>
-                <h2>A dual-stream poultry enterprise</h2>
-                <p>We run two complementary operations side by side: high-volume egg production and advanced broiler rearing for premium meat. Both are built for scale, hygiene and consistency.</p>
-            </div>
-        </div>
-        <div class="streams" style="margin-top:48px">
-            <div class="stream">
-                <div class="media"><img src="static/img/egg-house.webp" alt="Egg production" width="900" height="1200" loading="lazy" decoding="async"></div>
-                <div class="body">
-                    <h3>Egg production</h3>
-                    <p>Grand-scale, modern layer houses dedicated to high-volume table-egg production.</p>
-                    <ul>
-                        <li>200,000 egg-laying hens</li><li>Clean, climate-controlled housing</li>
-                        <li>Graded and packed for retail and wholesale</li><li>Steady year-round supply</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="stream">
-                <div class="media"><img src="static/img/broiler-house.webp" alt="Poultry meat" width="1200" height="905" loading="lazy" decoding="async"></div>
-                <div class="body">
-                    <h3>Poultry meat</h3>
-                    <p>Advanced broiler rearing focused on premium poultry-meat processing.</p>
-                    <ul>
-                        <li>200,000 broilers managed simultaneously</li><li>Modern rearing and processing infrastructure</li>
-                        <li>Hygienic preparation and packaging</li><li>Export-ready handling and storage</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<div class="container stats"><div class="stats__card"><div class="stat"><div class="stat__num" data-count="200000" data-sep=",">200,000</div><div class="stat__label">Egg-laying hens</div></div><div class="stat"><div class="stat__num" data-count="200000" data-sep=",">200,000</div><div class="stat__label">Broiler chickens reared at once</div></div><div class="stat"><div class="stat__num" data-count="2014">2014</div><div class="stat__label">Operating and growing since</div></div><div class="stat"><div class="stat__num" data-count="3">3</div><div class="stat__label">Export markets and counting</div></div></div></div>
+
+<section class="section" aria-labelledby="what-title">
+  <div class="container">
+    <div class="section-head section-head--split reveal"><div><span class="eyebrow">What we do</span><h2 class="h2" id="what-title">A dual-stream poultry enterprise</h2></div><p class="lead">We run two complementary operations side by side: high-volume egg production and advanced broiler rearing for premium meat. Both are built for scale, hygiene and consistency.</p></div>
+    <div class="split reveal">
+      <div class="split__media"><img src="static/img/egg-house.webp" srcset="static/img/sizes/egg-house-480.webp 480w, static/img/sizes/egg-house-720.webp 720w, static/img/egg-house.webp 900w" sizes="(min-width:900px) 50vw, 100vw" alt="Long aisle of a modern layer house with rows of cages" width="900" height="1200" loading="lazy" decoding="async"><div class="float-badge"><span class="float-badge__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22c4.4 0 7-3.1 7-7.5S15.9 2 12 2 5 10.1 5 14.5 7.6 22 12 22z"/></svg></span><div><span class="float-badge__num">200,000</span><div class="float-badge__label">laying hens</div></div></div></div>
+      <div class="split__body">
+        <span class="split__index">01 — Eggs</span>
+        <h3 class="h2">Egg production</h3>
+        <p class="lead">Grand-scale, modern layer houses dedicated to high-volume table-egg production.</p>
+        <ul class="checklist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>200,000 egg-laying hens</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Clean, climate-controlled housing</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Graded and packed for retail and wholesale</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Steady year-round supply</span></li></ul>
+      </div>
     </div>
+    <div class="split split--reverse reveal">
+      <div class="split__media"><img src="static/img/meat.webp" srcset="static/img/sizes/meat-480.webp 480w, static/img/sizes/meat-800.webp 800w, static/img/meat.webp 1200w" sizes="(min-width:900px) 50vw, 100vw" alt="Whole chickens on the processing line" width="1200" height="983" loading="lazy" decoding="async"><div class="float-badge"><span class="float-badge__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15.4 15.63a7.875 6 135 1 1 6.23-6.23 4.3 3.43 135 0 0-6.23 6.23"/><path d="m8.29 12.71-2.6 2.6a2.5 2.5 0 1 0-1.65 4.65A2.5 2.5 0 1 0 8.7 18.3l2.59-2.59"/></svg></span><div><span class="float-badge__num">200,000</span><div class="float-badge__label">broilers at once</div></div></div></div>
+      <div class="split__body">
+        <span class="split__index">02 — Poultry meat</span>
+        <h3 class="h2">Poultry meat</h3>
+        <p class="lead">Advanced broiler rearing focused on premium poultry-meat processing.</p>
+        <ul class="checklist"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>200,000 broilers managed simultaneously</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Modern rearing and processing infrastructure</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Hygienic preparation and packaging</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Export-ready handling and storage</span></li></ul>
+        <p style="margin-top:2rem"><a class="link-arrow" href="products/">See all products<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="block alt">
-    <div class="wrap">
-        <div class="section-head">
-            <span class="eyebrow">Why TAZE TAGAM</span>
-            <h2>Built for scale and trust</h2>
-        </div>
-        <div class="features">
-            <div class="feature">
-                <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21v-6h6v6"/></svg></div>
-                <h3>Large, modern facilities</h3><p>Purpose-built layer and broiler houses operated to high standards of cleanliness and control.</p>
-            </div>
-            <div class="feature">
-                <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
-                <h3>Export experience</h3><p>We already supply foreign markets and handle international shipping with reliable logistics.</p>
-            </div>
-            <div class="feature">
-                <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                <h3>Consistent quality</h3><p>Two farms working to one standard, so buyers get the same fresh product every time.</p>
-            </div>
-        </div>
+<section class="section section--white" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section-head section-head--split reveal"><div><span class="eyebrow">Why TAZE TAGAM</span><h2 class="h2" id="why-title">Built for scale and trust</h2></div><p class="lead">Our goal is simple: dependable, fresh products at fair prices, produced to a consistent standard across both of our farms.</p></div>
+    <div class="bento">
+      <article class="tile bento__photo reveal"><img src="static/img/broiler-house.webp" srcset="static/img/sizes/broiler-house-480.webp 480w, static/img/sizes/broiler-house-800.webp 800w, static/img/broiler-house.webp 1200w" sizes="(min-width:760px) 58vw, 100vw" alt="Thousands of broiler chickens inside a large, bright broiler house" width="1200" height="905" loading="lazy" decoding="async"><span class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12M6 14h12M6 22V10h12v12"/></svg>Facilities</span><h3>Large, modern facilities</h3><p>Purpose-built layer and broiler houses operated to high standards of cleanliness and control.</p></article>
+      <article class="tile tile--dark reveal"><span class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span><h3>Export experience</h3><p>We already supply foreign markets and handle international shipping with reliable logistics.</p></article>
+      <article class="tile tile--gold reveal"><span class="tile__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Consistent quality</h3><p>Two farms working to one standard, so buyers get the same fresh product every time.</p></article>
     </div>
+  </div>
 </section>
 
-<section class="block export-band">
-    <div class="wrap">
-        <div class="section-head">
-            <span class="eyebrow" style="color:var(--wheat-soft)">Global reach</span>
-            <h2 style="color:#fff">Exporting beyond Turkmenistan</h2>
-            <p style="color:#dde7d8">Our products already reach international buyers. We are fully equipped to demonstrate reliable logistics and international shipping standards.</p>
-        </div>
-        <div class="export-countries">
-            <span class="country-chip">Dubai (UAE)</span><span class="country-chip">Qatar</span><span class="country-chip">Afghanistan</span>
-        </div>
-        <p style="margin-top:28px"><a href="export/" class="btn btn-primary">See export &amp; logistics</a></p>
+<section class="section section--dark" aria-labelledby="reach-title">
+  <div class="container reach">
+    <div class="reveal">
+      <span class="eyebrow">Global reach</span>
+      <h2 class="h2" id="reach-title">Exporting beyond Turkmenistan</h2>
+      <p class="lead" style="margin-top:1.25rem">Our products already reach international buyers. We are fully equipped to demonstrate reliable logistics and international shipping standards.</p>
+      <ul class="markets"><li class="market reveal"><span class="market__code" aria-hidden="true">AE</span><div><strong>Dubai (UAE)</strong><span>Gulf market</span></div></li><li class="market reveal"><span class="market__code" aria-hidden="true">QA</span><div><strong>Qatar</strong><span>Gulf market</span></div></li><li class="market reveal"><span class="market__code" aria-hidden="true">AF</span><div><strong>Afghanistan</strong><span>Regional market</span></div></li></ul>
+      <p style="margin-top:2rem"><a class="link-arrow" href="export/">See export &amp; logistics<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
     </div>
+    <div class="map reveal">
+<svg viewBox="0 0 600 440" role="img" aria-label="Map of export routes from Ahal, Turkmenistan to Dubai (UAE), Qatar and Afghanistan">
+  <defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.2" fill="rgba(231,200,120,.16)"/></pattern></defs>
+  <rect width="600" height="440" fill="url(#dots)"/>
+  <circle cx="286" cy="96" r="90" fill="none" stroke="rgba(231,200,120,.12)"/>
+  <circle cx="286" cy="96" r="180" fill="none" stroke="rgba(231,200,120,.08)"/>
+  <circle cx="286" cy="96" r="280" fill="none" stroke="rgba(231,200,120,.05)"/>
+  <text class="sea" x="110" y="80" text-anchor="middle">Caspian Sea</text>
+  <text class="sea" x="170" y="330" text-anchor="middle">Persian Gulf</text>
+  <path class="route" d="M286 96 Q400 70 440 176"/><path class="route" d="M286 96 Q290 250 214 384"/><path class="route" d="M286 96 Q150 190 110 380"/>
+  <circle cx="440" cy="176" r="12" fill="rgba(231,200,120,.18)"/><circle cx="440" cy="176" r="6" fill="#e7c878"/><text x="456" y="181" text-anchor="start" font-size="16" font-weight="600">Afghanistan</text><circle cx="214" cy="384" r="12" fill="rgba(231,200,120,.18)"/><circle cx="214" cy="384" r="6" fill="#e7c878"/><text x="230" y="389" text-anchor="start" font-size="16" font-weight="600">Dubai (UAE)</text><circle cx="110" cy="380" r="12" fill="rgba(231,200,120,.18)"/><circle cx="110" cy="380" r="6" fill="#e7c878"/><text x="94" y="385" text-anchor="end" font-size="16" font-weight="600">Qatar</text>
+  <circle class="pulse" cx="286" cy="96" r="10" fill="#c79324"/>
+  <circle cx="286" cy="96" r="9" fill="#c79324" stroke="#faf7ef" stroke-width="3"/>
+  <text x="286" y="54" text-anchor="middle" font-size="17" font-weight="700">TAZE TAGAM</text>
+  <text x="286" y="74" text-anchor="middle" font-size="13" fill="#b9c3b4">Ahal, Turkmenistan</text>
+</svg>
+</div>
+  </div>
 </section>
 
-<section class="block">
-    <div class="wrap">
-        <div class="section-head">
-            <span class="eyebrow">Our farms</span>
-            <h2>Two production sites in Ahal Velayat</h2>
-            <p class="farms-note">Both farms are led by the same director, Pena Gapurov — one team, one standard of quality.</p>
-        </div>
-        <div class="farms">
-            <div class="farm">
-                <div class="farm-logo">
-                    <img src="static/img/logo.webp" alt="Taze Tagam logo" width="201" height="160" loading="lazy" decoding="async">
-                    
-                </div>
-                <span class="tag">Farm 1</span>
-                <h3>Taze Tagam</h3>
-                <p>Ak Bugday Etrap, Ahal Velayat, Turkmenistan. Sale of poultry meat and chicken eggs at affordable prices under the Garagum Farmers&#39; Association.</p>
-                <p class="dir">Pena Gapurov <span>· Director</span></p>
-            </div>
-            <div class="farm">
-                <div class="farm-logo">
-                    <img src="static/img/logo2.webp" alt="Fermer logo" width="488" height="324" loading="lazy" decoding="async">
-                    
-                </div>
-                <span class="tag">Farm 2</span>
-                <h3>Fermer</h3>
-                <p>Gokdepe Etrap, Ahal Velayat, Turkmenistan.</p>
-                <p class="dir">Pena Gapurov <span>· Director</span></p>
-            </div>
-        </div>
-    </div>
+<section class="section" aria-labelledby="cert-title">
+  <div class="container">
+    <div class="section-head section-head--split reveal"><div><span class="eyebrow">Recognition</span><h2 class="h2" id="cert-title">Certified and recognised</h2></div><p class="lead">Our eggs are tested and certified by Turkmenistan's state services, and our director has been recognised by the country's leading business organisations.</p></div>
+    <div class="grid grid--4"><button class="cert reveal" type="button" data-lightbox="static/img/cert1.webp" data-caption="17th Anniversary Award"><span class="cert__frame"><img src="static/img/sizes/cert1-400.webp" alt="17th Anniversary Award" width="800" height="1067" loading="lazy" decoding="async"><span class="cert__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></span><span class="cert__body"><span class="cert__year">March 2025</span><strong>17th Anniversary Award</strong><span>Union of Entrepreneurs and Industrialists of Turkmenistan</span></span><span class="sr-only">— View certificate</span></button><button class="cert reveal" type="button" data-lightbox="static/img/cert2.webp" data-caption="Export Achievement"><span class="cert__frame"><img src="static/img/sizes/cert2-400.webp" alt="Export Achievement" width="800" height="600" loading="lazy" decoding="async"><span class="cert__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></span><span class="cert__body"><span class="cert__year">July 2025</span><strong>Export Achievement</strong><span>Turkmenistan Export Goods Fair & Chamber of Commerce, Istanbul</span></span><span class="sr-only">— View certificate</span></button><button class="cert reveal" type="button" data-lightbox="static/img/cert3.webp" data-caption="Certificate of Conformity"><span class="cert__frame"><img src="static/img/sizes/cert3-400.webp" alt="Certificate of Conformity" width="990" height="1400" loading="lazy" decoding="async"><span class="cert__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></span><span class="cert__body"><span class="cert__year">Eggs</span><strong>Certificate of Conformity</strong><span>State Sanitary-Epidemiological Service, Ministry of Health of Turkmenistan</span></span><span class="sr-only">— View certificate</span></button><button class="cert reveal" type="button" data-lightbox="static/img/cert4.webp" data-caption="Veterinary Export Certificate"><span class="cert__frame"><img src="static/img/sizes/cert4-400.webp" alt="Veterinary Export Certificate" width="990" height="1400" loading="lazy" decoding="async"><span class="cert__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></span><span class="cert__body"><span class="cert__year">Export</span><strong>Veterinary Export Certificate</strong><span>State Veterinary Service of Turkmenistan</span></span><span class="sr-only">— View certificate</span></button></div>
+    <p style="margin-top:2.5rem"><a class="link-arrow" href="about/">More about the company<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+  </div>
 </section>
 
-<section class="cta-band">
-    <div class="wrap">
-        <h2>Interested in our eggs or poultry meat?</h2>
-        <p>Talk to us about wholesale supply, regular contracts or export orders.</p>
-        <a href="contact/" class="btn btn-dark">Contact us</a>
-    </div>
+<section class="section section--sand" aria-labelledby="farms-title">
+  <div class="container">
+    <div class="section-head section-head--split reveal"><div><span class="eyebrow">Our farms</span><h2 class="h2" id="farms-title">Two production sites in Ahal Velayat</h2></div><p class="lead">Both farms are led by the same director, Pena Gapurov — one team, one standard of quality.</p></div>
+    <div class="grid grid--2"><article class="farm reveal"><div class="farm__top"><img class="farm__logo" src="static/img/logo.webp" alt="Taze Tagam" width="201" height="160" loading="lazy"><span class="farm__no">Farm 1</span></div><h3>Taze Tagam</h3><p>Ak Bugday Etrap, Ahal Velayat, Turkmenistan. Sale of poultry meat and chicken eggs at affordable prices under the Garagum Farmers' Association.</p><div class="farm__meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg>Pena Gapurov · Director</span><a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query=Ak%20Bugday%20Etrap%2C%20Ahal%2C%20Turkmenistan" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Open in Maps</a></div></article><article class="farm reveal"><div class="farm__top"><img class="farm__logo" src="static/img/logo2.webp" alt="Fermer" width="488" height="324" loading="lazy"><span class="farm__no">Farm 2</span></div><h3>Fermer</h3><p>Gokdepe Etrap, Ahal Velayat, Turkmenistan.</p><div class="farm__meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg>Pena Gapurov · Director</span><a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query=Gokdepe%2C%20Ahal%2C%20Turkmenistan" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Open in Maps</a></div></article></div>
+  </div>
 </section>
 
-    </main>
-    
-    
-    <div id="cookieBanner" style="display:none">
-        <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
-            <span>This site uses cookies for security and session management.</span>
-            <span style="display:flex;gap:10px">
-                <button class="js-cookie-choice" data-choice="rejected" style="padding:8px 20px;background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.45);border-radius:6px;font-weight:600;cursor:pointer;white-space:nowrap">Reject</button>
-                <button class="js-cookie-choice" data-choice="accepted" style="padding:8px 20px;background:var(--wheat);color:var(--field-deep);border:none;border-radius:6px;font-weight:600;cursor:pointer;white-space:nowrap">Accept</button>
-            </span>
-        </div>
+<section class="section section--tight" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta-band reveal">
+      <img src="static/img/export3.webp" srcset="static/img/sizes/export3-640.webp 640w, static/img/sizes/export3-1000.webp 1000w, static/img/export3.webp 1400w" sizes="(min-width:1240px) 1240px, 100vw" alt="" width="1400" height="647" loading="lazy" decoding="async">
+      <h2 id="cta-title">Interested in our eggs or poultry meat?</h2>
+      <p>Talk to us about wholesale supply, regular contracts or export orders.</p>
+      <div class="btn-row"><a class="btn btn--wa" href="https://wa.me/99363805000?text=Hello%21%20I%27m%20interested%20in%20TAZE%20TAGAM%20products.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.9.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.47-9.47 9.47zm8.06-17.53A11.32 11.32 0 0 0 12.04.63C5.76.63.66 5.73.66 12c0 2 .52 3.96 1.52 5.69L.57 23.5l5.95-1.56a11.36 11.36 0 0 0 5.52 1.4h.01c6.27 0 11.38-5.1 11.38-11.37 0-3.04-1.18-5.9-3.33-8.05z"/></svg>WhatsApp</a><a class="btn btn--gold" href="tel:+99363805000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+993 63 80 50 00</a><a class="btn btn--ghost-light" href="mailto:pena.gapurov@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</a></div>
     </div>
-    
-    
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-    
-    <footer class="site">
-        <div class="wrap">
-            <div class="foot-grid">
-                <div class="foot-brand">
-                    <div class="name">TAZE TAGAM</div>
-                    <p>Eggs and poultry meat from the heart of Turkmenistan. Operating and growing since 2014 under the Garagum Farmers&#39; Association.</p>
-                </div>
-                <div>
-                    <h2>Pages</h2>
-                    <ul>
-                        <li><a href="./">Home</a></li>
-                        <li><a href="about/">About</a></li>
-                        <li><a href="products/">Products</a></li>
-                        <li><a href="export/">Export</a></li>
-                        <li><a href="contact/">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Contact</h2>
-                    <ul>
-                        <li>Pena Gapurov, Director</li>
-                        <li><a href="tel:+99363805000">+993 63 80 50 00</a></li>
-                        <li><a href="mailto:pena.gapurov@gmail.com">pena.gapurov@gmail.com</a></li>
-                        <li>Ak Bugday Etrap, Ahal Velayat, Turkmenistan</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="foot-bottom">
-                <span>&copy; 2026 TAZE TAGAM. All rights reserved.</span>
-                <span>Garagum Farmers&#39; Association, Ahal Velayat, Turkmenistan</span>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="static/js/main.js"></script>
-    
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-badge"><img src="static/img/logo.webp" alt="Täze Tagam logo" width="201" height="160"><img src="static/img/logo2.webp" alt="Fermer logo" width="488" height="324"></span>
+        <p>Eggs and poultry meat from the heart of Turkmenistan. Operating and growing since 2014 under the Garagum Farmers' Association.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul class="footer-links"><li><a href="./">Home</a></li><li><a href="about/">About</a></li><li><a href="products/">Products</a></li><li><a href="export/">Export</a></li><li><a href="contact/">Contact</a></li></ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg><span>Pena Gapurov, Director</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+99363805000">+993 63 80 50 00</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.9.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.47-9.47 9.47zm8.06-17.53A11.32 11.32 0 0 0 12.04.63C5.76.63.66 5.73.66 12c0 2 .52 3.96 1.52 5.69L.57 23.5l5.95-1.56a11.36 11.36 0 0 0 5.52 1.4h.01c6.27 0 11.38-5.1 11.38-11.37 0-3.04-1.18-5.9-3.33-8.05z"/></svg><a href="https://wa.me/99363805000?text=Hello%21%20I%27m%20interested%20in%20TAZE%20TAGAM%20products.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:pena.gapurov@gmail.com">pena.gapurov@gmail.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Ak Bugday Etrap, Ahal Velayat, Turkmenistan</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 TAZE TAGAM. All rights reserved.</span>
+      <span>Member of the Union of Entrepreneurs and Industrialists of Turkmenistan</span>
+    </div>
+  </div>
+</footer>
+<nav class="action-bar" aria-label="Contact">
+  <a href="tel:+99363805000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call</a>
+  <a class="is-wa" href="https://wa.me/99363805000?text=Hello%21%20I%27m%20interested%20in%20TAZE%20TAGAM%20products.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.9.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.47-9.47 9.47zm8.06-17.53A11.32 11.32 0 0 0 12.04.63C5.76.63.66 5.73.66 12c0 2 .52 3.96 1.52 5.69L.57 23.5l5.95-1.56a11.36 11.36 0 0 0 5.52 1.4h.01c6.27 0 11.38-5.1 11.38-11.37 0-3.04-1.18-5.9-3.33-8.05z"/></svg>WhatsApp</a>
+  <a href="mailto:pena.gapurov@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</a>
+</nav>
+<a class="wa-float" href="https://wa.me/99363805000?text=Hello%21%20I%27m%20interested%20in%20TAZE%20TAGAM%20products.%20Please%20send%20me%20a%20quote." target="_blank" rel="noopener" aria-label="WhatsApp +993 63 80 50 00"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.9.99 6.7 2.78a9.4 9.4 0 0 1 2.77 6.7c0 5.23-4.25 9.47-9.47 9.47zm8.06-17.53A11.32 11.32 0 0 0 12.04.63C5.76.63.66 5.73.66 12c0 2 .52 3.96 1.52 5.69L.57 23.5l5.95-1.56a11.36 11.36 0 0 0 5.52 1.4h.01c6.27 0 11.38-5.1 11.38-11.37 0-3.04-1.18-5.9-3.33-8.05z"/></svg>WhatsApp</a>
+<dialog class="lightbox" id="lightbox" aria-label="View certificate">
+  <button class="lightbox__close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <img src="data:," alt="">
+  <p></p>
+</dialog>
+<script src="static/js/main.js?v=2" defer></script>
 </body>
 </html>

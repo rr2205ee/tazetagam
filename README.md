@@ -14,37 +14,52 @@ export/                                    ->  /export/
 contact/                                   ->  /contact/
 ru/                   Russian versions     ->  /ru/, /ru/about/, ...
 404.html              shown for unknown URLs
-static/               images, icons, JavaScript
-CNAME                 the custom domain GitHub Pages serves
+static/css/site.css   ALL the styling: colours, fonts, spacing, layout
+static/js/main.js     menu, scroll effects, number counters, certificate viewer
+static/img/           photos, logos, certificates, QR code
+static/img/sizes/     smaller copies of the photos for phones (made from the originals)
+static/img/og-image.jpg  picture shown when the site is shared on WhatsApp, Telegram etc.
+static/fonts/         the two fonts (Fraunces for headings, Inter for text)
 sitemap.xml           all 10 pages, both languages
 ```
 
-Each page is a complete standalone HTML file with the CSS inlined in `<head>`.
-To change wording, edit the file directly. Note that a change to the shared
-header or footer has to be repeated in all 11 HTML files — that is the trade-off
-for having no build step.
+## How to change things
 
-## The contact form is currently switched off
+**Wording.** Open the page's `index.html` and change the text. English pages
+are in the top folders; Russian pages are in `ru/`. Change both languages.
 
-The contact pages show the director's phone and email directly instead of a
-form. This is deliberate: the form posts to [Web3Forms](https://web3forms.com),
-which needs an access key, and until that key exists every submission would
-fail and the sender's message would be lost.
+**Colours, sizes, spacing.** Everything is in `static/css/site.css`. The brand
+colours are the first lines under `:root` (for example `--green-800` and
+`--gold-500`). Change a colour there and it changes on every page.
 
-**To turn the form back on:**
+**Phone number or email.** These appear on every page (header, footer, contact
+buttons, WhatsApp links). Use "find and replace in all files" in your editor
+for `+993 63 80 50 00`, `+99363805000`, `99363805000` (WhatsApp) and
+`pena.gapurov@gmail.com`.
 
-1. Sign up at https://web3forms.com with the address that should receive
-   enquiries. The access key is emailed to that address.
-2. Restore the form markup on `contact/index.html` and `ru/contact/index.html`.
-   Both pages are in this repository's git history from before the form was
-   removed, along with the `<script src=".../contact.js">` tag each page had at
-   the end. `static/js/contact.js` was kept in place for this.
-3. Replace `PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE` with the real key in both
-   pages.
-4. Send a real test message and confirm it arrives before relying on it.
+**Menu and footer.** They are repeated in all 11 HTML files, so a change there
+has to be made in every file. This is the price of having no build step.
 
-The key is meant to be public - it only permits sending mail to your own
-address.
+## Uploading to GitHub
+
+Upload changed files to the repository on github.com in the same folders they
+are in here. GitHub Pages publishes them within a minute or two. Upload every
+file that changed. For example, a change to `site.css` only needs that one
+file, but a change to the footer needs all 11 HTML files.
+
+After uploading, if the site still looks old, press Ctrl+F5 to reload without
+the browser's saved copy.
+
+## The contact form is switched off
+
+The contact pages show the director's phone, WhatsApp and email directly
+instead of a form. The old form used [Web3Forms](https://web3forms.com), which
+needs an access key, and until that key exists every submission would fail and
+the sender's message would be lost.
+
+`static/js/contact.js` is still in the folder from that form. If you want a
+form again, it has to be redesigned to match the new pages. After adding it,
+send a real test message and check that it arrives.
 
 ## Deploying to GitHub Pages
 
@@ -98,9 +113,6 @@ GitHub Pages serves files and cannot run code, so these were dropped:
   server or a login.
 - **Security response headers.** GitHub Pages sends its own and does not allow
   custom ones. HTTPS and HSTS still apply.
-
-Form validation (required fields, email format, minimum message length) still
-runs, now in the browser.
 
 ## Language handling
 

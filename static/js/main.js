@@ -1,92 +1,111 @@
-// Site-wide behavior. Loaded on every page from base.html.
-document.addEventListener('DOMContentLoaded', function () {
-    // Mobile menu: toggle button + close when a link is chosen
-    var navlinks = document.getElementById('navlinks');
-    var toggle = document.querySelector('.nav-toggle');
-    if (toggle && navlinks) {
-        toggle.addEventListener('click', function () {
-            navlinks.classList.toggle('open');
-        });
-    }
-    document.querySelectorAll('.nav-links a').forEach(function (link) {
-        link.addEventListener('click', function () {
-            if (navlinks) navlinks.classList.remove('open');
-        });
-    });
-
-    // Back to top button
-    var backBtn = document.getElementById('backToTop');
-    if (backBtn) {
-        window.addEventListener('scroll', function () {
-            backBtn.classList.toggle('show', window.scrollY > 300);
-        });
-        backBtn.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
-
+// Site-wide behaviour, loaded on every page.
+// Everything here is an enhancement: without JavaScript all content is still visible.
+(function () {
+    var doc = document.documentElement;
+    doc.classList.add('js');
     var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Scroll-reveal: cards and headings fade in as they enter the viewport.
-    // The .reveal class is only added here, so without JS nothing is hidden.
-    if ('IntersectionObserver' in window && !reducedMotion) {
-        var revealObs = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal-in');
-                    revealObs.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.12 });
-
-        document.querySelectorAll('.feature, .stream, .farm, .section-head, .country-chip, .panel-stat').forEach(function (el, i) {
-            el.classList.add('reveal');
-            el.style.transitionDelay = (i % 4) * 90 + 'ms';
-            revealObs.observe(el);
-        });
-    }
-
-    // Count-up animation for the big statistics (e.g. 200,000 hens)
-    if ('IntersectionObserver' in window && !reducedMotion) {
-        var countObs = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (!entry.isIntersecting) return;
-                countObs.unobserve(entry.target);
-                var el = entry.target;
-                var raw = el.textContent.trim();
-                var target = parseInt(raw.replace(/[^0-9]/g, ''), 10);
-                if (!target || target < 10) return;
-                var useComma = raw.indexOf(',') !== -1;
-                var start = null, dur = 1400;
-                function step(ts) {
-                    if (!start) start = ts;
-                    var p = Math.min((ts - start) / dur, 1);
-                    var eased = 1 - Math.pow(1 - p, 3);
-                    var val = Math.round(target * eased);
-                    el.textContent = useComma ? val.toLocaleString('en-US') : String(val);
-                    if (p < 1) requestAnimationFrame(step);
-                    else el.textContent = raw;
-                }
-                requestAnimationFrame(step);
-            });
-        }, { threshold: 0.4 });
-        document.querySelectorAll('.panel-stat .num').forEach(function (el) { countObs.observe(el); });
-    }
-
-    // Cookie consent banner. There is no server now, so the visitor's choice is
-    // stored in localStorage and the banner is revealed only when no choice exists.
-    var banner = document.getElementById('cookieBanner');
-    if (banner) {
-        var stored = null;
-        try { stored = localStorage.getItem('cookies_consent'); } catch (e) { /* private mode */ }
-        if (stored !== 'accepted' && stored !== 'rejected') {
-            banner.style.display = 'flex';
+    document.addEventListener('DOMContentLoaded', function () {
+        // Header turns solid after scrolling; floating contact buttons appear after the hero.
+        var header = document.querySelector('.site-header');
+        var floaters = document.querySelectorAll('.action-bar, .wa-float');
+        var ticking = false;
+        function onScroll() {
+            var y = window.scrollY;
+            if (header) header.classList.toggle('is-scrolled', y > 40);
+            floaters.forEach(function (el) { el.classList.toggle('is-visible', y > 420); });
+            ticking = false;
         }
-        document.querySelectorAll('.js-cookie-choice').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                try { localStorage.setItem('cookies_consent', btn.dataset.choice); } catch (e) { /* ignore */ }
-                banner.style.display = 'none';
-            });
+        window.addEventListener('scroll', function () {
+            if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+        }, { passive: true });
+        onScroll();
+
+        // Mobile menu
+        var menu = document.getElementById('mobile-menu');
+        var openBtn = document.querySelector('.menu-toggle');
+        var closeBtn = menu && menu.querySelector('.menu-close');
+        function setMenu(open) {
+            if (!menu) return;
+            menu.classList.toggle('is-open', open);
+            menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+            if (open) menu.removeAttribute('inert'); else menu.setAttribute('inert', '');
+            document.body.classList.toggle('menu-open', open);
+            if (openBtn) openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            if (open && closeBtn) setTimeout(function () { closeBtn.focus(); }, 60);
+            else if (!open && openBtn) openBtn.focus();
+        }
+        if (openBtn) openBtn.addEventListener('click', function () { setMenu(true); });
+        if (closeBtn) closeBtn.addEventListener('click', function () { setMenu(false); });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && menu && menu.classList.contains('is-open')) setMenu(false);
         });
-    }
-});
+
+        // Reveal sections as they scroll into view
+        var revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window && !reducedMotion) {
+            var revealObs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-in');
+                        revealObs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            revealEls.forEach(function (el) { revealObs.observe(el); });
+        } else {
+            revealEls.forEach(function (el) { el.classList.add('is-in'); });
+        }
+
+        // Count-up for numbers marked with data-count (e.g. 200,000)
+        var counters = document.querySelectorAll('[data-count]');
+        if ('IntersectionObserver' in window && !reducedMotion) {
+            var countObs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    countObs.unobserve(entry.target);
+                    var el = entry.target;
+                    var finalText = el.textContent;
+                    var target = parseInt(el.getAttribute('data-count'), 10);
+                    var sep = el.getAttribute('data-sep') || '';
+                    var start = null, dur = 1600;
+                    function format(n) {
+                        return sep ? String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep) : String(n);
+                    }
+                    function step(ts) {
+                        if (!start) start = ts;
+                        var p = Math.min((ts - start) / dur, 1);
+                        var eased = 1 - Math.pow(1 - p, 4);
+                        el.textContent = format(Math.round(target * eased));
+                        if (p < 1) requestAnimationFrame(step);
+                        else el.textContent = finalText;
+                    }
+                    requestAnimationFrame(step);
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(function (el) { countObs.observe(el); });
+        }
+
+        // Certificate lightbox
+        var box = document.getElementById('lightbox');
+        if (box && typeof box.showModal === 'function') {
+            var boxImg = box.querySelector('img');
+            var boxCap = box.querySelector('p');
+            document.querySelectorAll('[data-lightbox]').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    boxImg.src = btn.getAttribute('data-lightbox');
+                    boxImg.alt = btn.getAttribute('data-caption') || '';
+                    boxCap.textContent = btn.getAttribute('data-caption') || '';
+                    box.showModal();
+                });
+            });
+            box.querySelector('.lightbox__close').addEventListener('click', function () { box.close(); });
+            box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
+        } else {
+            // Old browsers: open the full image directly.
+            document.querySelectorAll('[data-lightbox]').forEach(function (btn) {
+                btn.addEventListener('click', function () { window.location.href = btn.getAttribute('data-lightbox'); });
+            });
+        }
+    });
+})();
